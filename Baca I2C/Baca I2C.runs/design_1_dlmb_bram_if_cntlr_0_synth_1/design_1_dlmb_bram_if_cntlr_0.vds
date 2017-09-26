@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Tue Sep 26 13:22:24 2017
+# Process ID: 2472
+# Current directory: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_dlmb_bram_if_cntlr_0_synth_1
+# Command line: vivado.exe -log design_1_dlmb_bram_if_cntlr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_dlmb_bram_if_cntlr_0.tcl
+# Log file: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/design_1_dlmb_bram_if_cntlr_0.vds
+# Journal file: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_dlmb_bram_if_cntlr_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_dlmb_bram_if_cntlr_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 283.898 ; gain = 60.273
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 383.367 ; gain = 80.305
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/synth/design_1_dlmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (2#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (3#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/5376/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dlmb_bram_if_cntlr_0' (4#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/synth/design_1_dlmb_bram_if_cntlr_0.vhd:84]
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 425.512 ; gain = 122.449
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 425.512 ; gain = 122.449
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 666.516 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 666.516 ; gain = 363.453
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 666.516 ; gain = 363.453
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:57 . Memory (MB): peak = 666.516 ; gain = 363.453
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 666.516 ; gain = 363.453
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:58 . Memory (MB): peak = 666.516 ; gain = 363.453
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:31 . Memory (MB): peak = 677.984 ; gain = 374.922
+Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:31 . Memory (MB): peak = 677.984 ; gain = 374.922
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:31 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     3|
+|2     |LUT3 |     4|
+|3     |FDRE |     2|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:32 . Memory (MB): peak = 698.270 ; gain = 395.207
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:36 . Memory (MB): peak = 702.688 ; gain = 399.625

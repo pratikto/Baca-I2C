@@ -1,0 +1,178 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Tue Sep 26 13:14:00 2017
+# Process ID: 1200
+# Current directory: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_axi_iic_0_0_synth_1
+# Command line: vivado.exe -log design_1_axi_iic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_iic_0_0.tcl
+# Log file: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_axi_iic_0_0_synth_1/design_1_axi_iic_0_0.vds
+# Journal file: B:/Baca I2C/Baca I2C/Baca I2C.runs/design_1_axi_iic_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_axi_iic_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 284.891 ; gain = 60.270
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 392.688 ; gain = 83.969
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_iic_0_0' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/synth/design_1_axi_iic_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'axi_iic' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+INFO: [Synth 8-638] synthesizing module 'iic' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+INFO: [Synth 8-638] synthesizing module 'axi_ipif_ssp1' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized21' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized21' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized22' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized22' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized23' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized23' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized24' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized24' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized25' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized25' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized26' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized26' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized27' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized27' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized28' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized28' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized29' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized29' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized30' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized30' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized31' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized31' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized32' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized32' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized33' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized33' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized34' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized34' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized35' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized35' (1#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (5#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/e956/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (6#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'axi_ipif_ssp1' (7#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+INFO: [Synth 8-638] synthesizing module 'reg_interface' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+INFO: [Synth 8-256] done synthesizing module 'reg_interface' (8#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+INFO: [Synth 8-638] synthesizing module 'filter' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+INFO: [Synth 8-638] synthesizing module 'debounce' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (9#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+INFO: [Synth 8-256] done synthesizing module 'filter' (11#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+INFO: [Synth 8-638] synthesizing module 'iic_control' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (12#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-638] synthesizing module 'shift8' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-256] done synthesizing module 'shift8' (13#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n__parameterized0' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n__parameterized0' (13#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-256] done synthesizing module 'iic_control' (14#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-638] synthesizing module 'FDR' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-256] done synthesizing module 'FDR' (15#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3951]
+INFO: [Synth 8-638] synthesizing module 'MUXCY_L' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:21638]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY_L' (16#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:21638]
+INFO: [Synth 8-638] synthesizing module 'XORCY' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:45685]
+INFO: [Synth 8-256] done synthesizing module 'XORCY' (17#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:45685]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (18#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-638] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-256] done synthesizing module 'SRL16E' (19#1) [C:/Xilinx/Vivado/2017.1/scripts/rt/data/unisim_comp.v:43673]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (20#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-638] synthesizing module 'dynamic_master' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+INFO: [Synth 8-256] done synthesizing module 'dynamic_master' (21#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO__parameterized0' [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (21#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-256] done synthesizing module 'iic' (22#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+INFO: [Synth 8-256] done synthesizing module 'axi_iic' (23#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ipshared/7442/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_iic_0_0' (24#1) [b:/Baca I2C/Baca I2C/Baca I2C.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/synth/design_1_axi_iic_0_0.vhd:91]
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 441.750 ; gain = 133.031
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 441.750 ; gain = 133.031
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 737.906 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:55 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:59 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 737.906 ; gain = 429.188
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:01:41 . Memory (MB): peak = 744.496 ; gain = 435.777
+Finished Technology Mapping : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished IO Insertion : Time (s): cpu = 00:01:36 ; elapsed = 00:01:44 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:36 ; elapsed = 00:01:44 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 748.320 ; gain = 439.602
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 748.320 ; gain = 439.602
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     8|
+|2     |LUT1    |     8|
+|3     |LUT2    |    70|
+|4     |LUT3    |    35|
+|5     |LUT4    |    70|
+|6     |LUT5    |    75|
+|7     |LUT6    |   191|
+|8     |MUXCY_L |     9|
+|9     |MUXF7   |     2|
+|10    |SRL16E  |    18|
+|11    |XORCY   |    12|
+|12    |FDR     |    11|
+|13    |FDRE    |   308|
+|14    |FDSE    |    49|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:45 . Memory (MB): peak = 748.320 ; gain = 439.602
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 748.320 ; gain = 443.391
