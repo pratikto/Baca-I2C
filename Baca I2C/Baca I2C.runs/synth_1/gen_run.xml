@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506410582">
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1506493808">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
@@ -33,7 +33,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/vivado tutoria/Basys3_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../kuliah/sem 6/embedded system/vivado tutoria/Basys3_Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../kuliah/sem 6/embedded system/vivado tutoria/Basys3_Master.xdc"/>
         <Attr Name="ImportTime" Val="1490879824"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -45,9 +45,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
