@@ -1,0 +1,24 @@
+19:00:03 INFO  : Registering command handlers for SDK TCF services
+19:00:05 INFO  : Launching XSCT server: xsct.bat -interactive B:\Sekerepsih\Baca-I2C\Baca\temp_xsdb_launch_script.tcl
+19:00:12 INFO  : XSCT server has started successfully.
+19:00:18 INFO  : Successfully done setting XSCT server connection channel  
+19:00:18 INFO  : Successfully done setting SDK workspace  
+19:00:18 INFO  : Processing command line option -hwspec B:/Sekerepsih/Baca-I2C/Baca.
+19:00:18 ERROR : Error occurred while creating hardware platform Baca_hw_platform_0 from sysdef
+java.io.FileNotFoundException: B:\Sekerepsih\Baca-I2C\Baca (Access is denied)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at com.xilinx.sdk.hw.internal.HwProjectCreator.createHwProjectFromZip(HwProjectCreator.java:100)
+	at com.xilinx.sdk.hw.HwProjectUtil.internalCreate(HwProjectUtil.java:266)
+	at com.xilinx.sdk.hw.HwProjectUtil.makeNewHardwareProject(HwProjectUtil.java:210)
+	at com.xilinx.sdk.hw.HwProjectUtil.makeNewHardwareProject(HwProjectUtil.java:197)
+	at com.xilinx.sdk.hw.HwProjectUtil.makeNewHardwareProject(HwProjectUtil.java:171)
+	at com.xilinx.sdk.startup.InitSDK.processHwSpecArgumentTask(InitSDK.java:516)
+	at com.xilinx.sdk.startup.InitSDK.access$8(InitSDK.java:498)
+	at com.xilinx.sdk.startup.InitSDK$12.run(InitSDK.java:449)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+19:00:18 ERROR : Unable to create Hardware Specification Project with specification file: B:/Sekerepsih/Baca-I2C/Baca
+19:02:03 INFO  : Project 'design_1_wrapper_hw_platform_0' created. You can now create BSPs and application projects targeting this hardware platform.
+21:13:26 INFO  : Example project baca_i2c_bsp_xiic_slave_example_1 has been created successfully.

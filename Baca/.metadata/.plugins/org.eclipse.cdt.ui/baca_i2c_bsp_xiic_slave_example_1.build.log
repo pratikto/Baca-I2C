@@ -1,0 +1,21 @@
+21:13:26 **** Build of configuration Debug for project baca_i2c_bsp_xiic_slave_example_1 ****
+make all 
+'Building file: ../src/xiic_slave_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiic_slave_example.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiic_slave_example.d" -MT"src/xiic_slave_example.o" -o "src/xiic_slave_example.o" "../src/xiic_slave_example.c"
+'Finished building: ../src/xiic_slave_example.c'
+' '
+'Building target: baca_i2c_bsp_xiic_slave_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c_bsp_xiic_slave_example_1.elf"  ./src/xiic_slave_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: baca_i2c_bsp_xiic_slave_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c_bsp_xiic_slave_example_1.elf  |tee "baca_i2c_bsp_xiic_slave_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13468	    372	   3424	  17264	   4370	baca_i2c_bsp_xiic_slave_example_1.elf
+'Finished building: baca_i2c_bsp_xiic_slave_example_1.elf.size'
+' '
+
+21:13:33 Build Finished (took 6s.481ms)
+
