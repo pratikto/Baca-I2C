@@ -12,6 +12,98 @@ I2Cdev::I2Cdev() {
 
 }
 
+int I2Cdev::init(int master, int addr)
+{
+//	u8 BytesRead;
+//	u8 BytesWritten;
+	SetMaster = master;
+	address = addr;
+	u32 StatusReg;
+	u8 Index;
+	int Status;
+//	EepromIicAddr = EEPROM_ADDRESS;
+	if (SetMaster == 1){ 							//act as master
+		/*
+			 * Initialize the IIC Core.
+			 */
+			Status = XIic_DynInit(address);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+
+			/*
+			 * Make sure all the Fifo's are cleared and Bus is Not busy.
+			 */
+			while (((StatusReg = XIic_ReadReg(address,
+						XIIC_SR_REG_OFFSET)) &
+						(XIIC_SR_RX_FIFO_EMPTY_MASK |
+						XIIC_SR_TX_FIFO_EMPTY_MASK |
+						XIIC_SR_BUS_BUSY_MASK)) !=
+						(XIIC_SR_RX_FIFO_EMPTY_MASK |
+						XIIC_SR_TX_FIFO_EMPTY_MASK)) {
+				}
+
+			/*
+			 * Initialize the data to written and the read buffer.
+			 */
+//			for (Index = 0; Index < PAGE_SIZE; Index++) {
+//				WriteBuffer[Index] = Index;
+//				ReadBuffer[Index] = 0;
+//			}
+	}
+	else if (address = 0) {
+//		XIic IicInstance;		/* The instance of the IIC device. */
+//		XIntc InterruptController; /* The instance of the Interrupt Controller */
+		XIic_Config *ConfigPtr;	/* Pointer to configuration data */
+
+
+			/*
+			 * Initialize the IIC driver so that it is ready to use.
+			 */
+			ConfigPtr = XIic_LookupConfig(IIC_DEVICE_ID);
+			if (ConfigPtr == NULL) {
+				return XST_FAILURE;
+			}
+
+			Status = XIic_CfgInitialize(&IicInstance, ConfigPtr,
+							ConfigPtr->BaseAddress);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+
+			/*
+			 * Setup the Interrupt System.
+			 */
+			Status = SetupInterruptSystem(&IicInstance);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+
+			/*
+			 * Include the Slave functions.
+			 */
+			XIic_SlaveInclude();
+
+			/*
+			 * Set the Transmit, Receive and Status Handlers.
+			 */
+			XIic_SetStatusHandler(&IicInstance, &IicInstance,
+					 StatusHandler(XIic_StatusHandler));
+			XIic_SetSendHandler(&IicInstance, &IicInstance,
+						(XIic_Handler) SendHandler);
+			XIic_SetRecvHandler(&IicInstance, &IicInstance,
+						(XIic_Handler) ReceiveHandler);
+
+			/*
+			 * Set the Address as a RESPOND type.
+			 */
+			Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_RESPOND_TYPE,
+						 SLAVE_ADDRESS);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+		}
+	}
+}
 /** Read a single bit from an 8-bit device register.
 * @param devAddr I2C slave device address
 * @param regAddr Register regAddr to read from

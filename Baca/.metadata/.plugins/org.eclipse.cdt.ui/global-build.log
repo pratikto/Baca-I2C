@@ -5644,3 +5644,1588 @@ mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
   11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
 'Finished building: baca_i2c.elf.size'
 ' '
+01:41:03 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:68:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:169:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:181:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:311:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+01:42:45 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In constructor 'I2Cdev::I2Cdev()':
+../src/i2c.cpp:17:3: error: 'EepromIicAddr' was not declared in this scope
+   EepromIicAddr = EEPROM_ADDRESS;
+   ^~~~~~~~~~~~~
+../src/i2c.cpp:17:19: error: 'EEPROM_ADDRESS' was not declared in this scope
+   EepromIicAddr = EEPROM_ADDRESS;
+                   ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:25: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+   Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                         ^~~~~~~~~~~~~~~~
+In file included from ../../baca_i2c_bsp/microblaze_0/include/xiic.h:324:0,
+                 from ../src/i2c.h:12,
+                 from ../src/i2c.cpp:8:
+../../baca_i2c_bsp/microblaze_0/include/xstatus.h:65:41: error: returning a value from a constructor
+ #define XST_FAILURE                     1L
+                                         ^
+../src/i2c.cpp:24:11: note: in expansion of macro 'XST_FAILURE'
+    return XST_FAILURE;
+           ^~~~~~~~~~~
+../src/i2c.cpp:43:27: error: 'PAGE_SIZE' was not declared in this scope
+   for (Index = 0; Index < PAGE_SIZE; Index++) {
+                           ^~~~~~~~~
+../src/i2c.cpp:12:5: warning: unused variable 'BytesRead' [-Wunused-variable]
+  u8 BytesRead;
+     ^~~~~~~~~
+../src/i2c.cpp:13:6: warning: unused variable 'BytesWritten' [-Wunused-variable]
+   u8 BytesWritten;
+      ^~~~~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:102:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:203:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:215:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:334:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:345:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:43:59 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In constructor 'I2Cdev::I2Cdev()':
+../src/i2c.cpp:17:2: error: 'EepromIicAddr' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/i2c.cpp:17:18: error: 'EEPROM_ADDRESS' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+                  ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+In file included from ../../baca_i2c_bsp/microblaze_0/include/xiic.h:324:0,
+                 from ../src/i2c.h:12,
+                 from ../src/i2c.cpp:8:
+../../baca_i2c_bsp/microblaze_0/include/xstatus.h:65:41: error: returning a value from a constructor
+ #define XST_FAILURE                     1L
+                                         ^
+../src/i2c.cpp:24:10: note: in expansion of macro 'XST_FAILURE'
+   return XST_FAILURE;
+          ^~~~~~~~~~~
+../src/i2c.cpp:42:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp:12:5: warning: unused variable 'BytesRead' [-Wunused-variable]
+  u8 BytesRead;
+     ^~~~~~~~~
+../src/i2c.cpp:13:5: warning: unused variable 'BytesWritten' [-Wunused-variable]
+  u8 BytesWritten;
+     ^~~~~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:101:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:202:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:214:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:333:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:344:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:44:49 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:68:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:169:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:181:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:311:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+01:45:24 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp:15:18: error: no 'int I2Cdev::init()' member function declared in class 'I2Cdev'
+ int I2Cdev::init();
+                  ^
+../src/i2c.cpp:16:1: error: expected unqualified-id before '{' token
+ {
+ ^
+make: *** [src/i2c.o] Error 1
+01:45:35 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp:15:18: error: no 'int I2Cdev::init()' member function declared in class 'I2Cdev'
+ int I2Cdev::init()
+                  ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:46:04 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:22:2: error: 'EepromIicAddr' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/i2c.cpp:22:18: error: 'EEPROM_ADDRESS' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+                  ^~~~~~~~~~~~~~
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp:17:5: warning: unused variable 'BytesRead' [-Wunused-variable]
+  u8 BytesRead;
+     ^~~~~~~~~
+../src/i2c.cpp:18:5: warning: unused variable 'BytesWritten' [-Wunused-variable]
+  u8 BytesWritten;
+     ^~~~~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:47:21 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:22:2: error: 'EepromIicAddr' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+  ^~~~~~~~~~~~~
+../src/i2c.cpp:22:18: error: 'EEPROM_ADDRESS' was not declared in this scope
+  EepromIicAddr = EEPROM_ADDRESS;
+                  ^~~~~~~~~~~~~~
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:48:56 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+01:59:26 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:01:51 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+In file included from ../src/i2c.cpp:8:0:
+../src/i2c.h:76:23: error: expected unqualified-id before '/' token
+  volatile u8 address; /
+                       ^
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::SlaveWriteData(u16)':
+../src/i2c.cpp:441:2: error: 'TransmitComplete' was not declared in this scope
+  TransmitComplete = 1;
+  ^~~~~~~~~~~~~~~~
+../src/i2c.cpp: In member function 'void I2Cdev::SendHandler(XIic*)':
+../src/i2c.cpp:529:2: error: 'TransmitComplete' was not declared in this scope
+  TransmitComplete = 0;
+  ^~~~~~~~~~~~~~~~
+make: *** [src/i2c.o] Error 1
+02:02:42 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:27:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:47:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:105:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:206:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:218:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:337:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:348:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:03:26 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp:15:5: error: prototype for 'int I2Cdev::init(int, int)' does not match any in class 'I2Cdev'
+ int I2Cdev::init(int master, int addr)
+     ^~~~~~
+In file included from ../src/i2c.cpp:8:0:
+../src/i2c.h:50:6: error: candidate is: int I2Cdev::init()
+  int init (void);
+      ^~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:107:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:208:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:220:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:339:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:350:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:03:52 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:29:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:49:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:107:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:208:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:220:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:339:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:350:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:05:07 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:29:26: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+    Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                          ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:49:28: error: 'PAGE_SIZE' was not declared in this scope
+    for (Index = 0; Index < PAGE_SIZE; Index++) {
+                            ^~~~~~~~~
+../src/i2c.cpp:57:24: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+  Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                        ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:77:26: error: 'PAGE_SIZE' was not declared in this scope
+  for (Index = 0; Index < PAGE_SIZE; Index++) {
+                          ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:135:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:236:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:248:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:367:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:378:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:07:26 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:29:26: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+    Status = XIic_DynInit(IIC_BASE_ADDRESS);
+                          ^~~~~~~~~~~~~~~~
+../src/i2c.cpp:49:28: error: 'PAGE_SIZE' was not declared in this scope
+    for (Index = 0; Index < PAGE_SIZE; Index++) {
+                            ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:222:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:352:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:07:43 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+In file included from ../../baca_i2c_bsp/microblaze_0/include/xiic.h:325:0,
+                 from ../src/i2c.h:12,
+                 from ../src/i2c.cpp:8:
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:37:38: error: 'IIC_BASE_ADDRESS' was not declared in this scope
+    while (((StatusReg = XIic_ReadReg(IIC_BASE_ADDRESS,
+                                      ^
+../../baca_i2c_bsp/microblaze_0/include/xiic_l.h:280:13: note: in definition of macro 'XIic_ReadReg'
+  XIic_In32((BaseAddress) + (RegOffset))
+             ^~~~~~~~~~~
+../src/i2c.cpp:49:28: error: 'PAGE_SIZE' was not declared in this scope
+    for (Index = 0; Index < PAGE_SIZE; Index++) {
+                            ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:222:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:352:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:08:08 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:49:28: error: 'PAGE_SIZE' was not declared in this scope
+    for (Index = 0; Index < PAGE_SIZE; Index++) {
+                            ^~~~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:222:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:352:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:08:33 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:222:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:352:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+02:10:31 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:11: error: expected primary-expression before ')' token
+  else if ()
+           ^
+../src/i2c.cpp:55:1: error: expected primary-expression before '}' token
+ }
+ ^
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:109:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:210:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:222:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:352:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:55:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:10:57 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: error: expected ')' before '{' token
+  else if (address = 0{
+                      ^
+../src/i2c.cpp:56:3: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  })
+   ^
+../src/i2c.cpp:57:1: error: expected primary-expression before '}' token
+ }
+ ^
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:212:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:224:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:354:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:11:06 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0){
+                      ^
+../src/i2c.cpp:56:3: error: expected primary-expression before ')' token
+  })
+   ^
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:212:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:224:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:354:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:11:08 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:56:3: error: expected primary-expression before ')' token
+  })
+   ^
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:212:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:224:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:354:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:11:15 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:111:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:212:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:224:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:343:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:354:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:57:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+02:13:06 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:89:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:91:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:158:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:259:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:271:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:390:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:401:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:17:13 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:89:32: error: invalid cast to function type 'void (*())(void*, int)'
+         (XIic_StatusHandler()) StatusHandler);
+                                ^~~~~~~~~~~~~
+../src/i2c.cpp:91:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:158:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:259:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:271:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:390:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:401:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:17:20 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:89:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:91:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:158:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:259:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:271:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:390:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:401:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:22:08 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:89:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:91:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:158:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:259:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:271:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:390:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:401:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:104:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:23:34 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:56:9: warning: unused variable 'InterruptController' [-Wunused-variable]
+   XIntc InterruptController; /* The instance of the Interrupt Controller */
+         ^~~~~~~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:25:23 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:56:9: warning: unused variable 'InterruptController' [-Wunused-variable]
+   XIntc InterruptController; /* The instance of the Interrupt Controller */
+         ^~~~~~~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:25:56 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:56:9: warning: unused variable 'InterruptController' [-Wunused-variable]
+   XIntc InterruptController; /* The instance of the Interrupt Controller */
+         ^~~~~~~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:26:25 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:56:9: warning: unused variable 'InterruptController' [-Wunused-variable]
+   XIntc InterruptController; /* The instance of the Interrupt Controller */
+         ^~~~~~~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+./src/main.o:(.bss.IicInstance+0x0): multiple definition of `IicInstance'
+./src/i2c.o:(.bss.IicInstance+0x0): first defined here
+./src/main.o: In function `Xil_Out32':
+B:\Sekerepsih\Baca-I2C\Baca\baca_i2c\Debug/../src/main.cc:268: multiple definition of `InterruptController'
+./src/i2c.o:B:\Sekerepsih\Baca-I2C\Baca\baca_i2c\Debug/../src/i2c.cpp:16: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [baca_i2c.elf] Error 1
+02:27:07 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+c:/xilinx/sdk/2017.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [baca_i2c.elf] Error 1
+02:27:17 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+02:30:02 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:56:9: warning: unused variable 'InterruptController' [-Wunused-variable]
+   XIntc InterruptController; /* The instance of the Interrupt Controller */
+         ^~~~~~~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
+02:30:12 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:31:26 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:32:02 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:30: error: invalid use of member function 'void I2Cdev::StatusHandler(XIic*, int)' (did you forget the '()' ?)
+         (XIic_StatusHandler) StatusHandler);
+                              ^~~~~~~~~~~~~
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1
+02:34:41 **** Auto Build of configuration Debug for project baca_i2c ****
+make all 
+'Building file: ../src/i2c.cpp'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  else if (address = 0) {
+                      ^
+../src/i2c.cpp:91:39: error: expected primary-expression before ')' token
+       StatusHandler(XIic_StatusHandler));
+                                       ^
+../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) SendHandler);
+                      ^~~~~~~~~~~
+../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
+       (XIic_Handler) ReceiveHandler);
+                      ^~~~~~~~~~~~~~
+../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
+  u8 Index;
+     ^~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
+../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/i2c.o] Error 1

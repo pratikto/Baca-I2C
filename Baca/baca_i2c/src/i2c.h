@@ -13,6 +13,7 @@
 #include "xintc.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
+#include "xil_io.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -47,6 +48,8 @@ class I2Cdev {
 public:
 	I2Cdev();
 
+	int init (int master, int addr);
+
 	static int readBit(u8 devAddr, u8 regAddr, u8 bitNum, u8 *data);
 	static int readBitW(u8 devAddr, u8 regAddr, u8 bitNum, uint16_t *data);
 	static int readBits(u8 devAddr, u8 regAddr, u8 bitStart, u8 length, u8 *data);
@@ -70,12 +73,15 @@ public:
 	virtual ~I2Cdev();
 
 private:
+	volatile int SetMaster;
+	volatile u8 address; //coba di cek di API nya pake u8 atau int parameternya
 	volatile u8 TransmitComplete;
 	volatile u8 ReceiveComplete;
 	volatile u8 SlaveRead;
 	volatile u8 SlaveWrite;
 	u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
 	u8 ReadBuffer[RECEIVE_COUNT]; /* Read buffer for reading a page. */
+
 
 	//axi iic act as slave
 	int SlaveWriteData(u16 ByteCount);
@@ -84,6 +90,9 @@ private:
 	void StatusHandler(XIic *InstancePtr, int Event);
 	void SendHandler(XIic *InstancePtr);
 	void ReceiveHandler(XIic *InstancePtr);
+
+	XIic IicInstance;		/* The instance of the IIC device. */
+	XIntc InterruptController; /* The instance of the Interrupt Controller */
 };
 
 #endif /* SRC_I2C_H_ */
