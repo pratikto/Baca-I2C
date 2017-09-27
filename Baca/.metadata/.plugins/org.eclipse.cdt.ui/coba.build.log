@@ -1,0 +1,21 @@
+20:55:49 **** Build of configuration Debug for project coba ****
+make all 
+'Building file: ../src/main.cc'
+'Invoking: MicroBlaze g++ compiler'
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../coba_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+'Finished building: ../src/main.cc'
+' '
+'Building target: coba.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../coba_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "coba.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: coba.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size coba.elf  |tee "coba.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2392	    316	   3108	   5816	   16b8	coba.elf
+'Finished building: coba.elf.size'
+' '
+
+20:55:55 Build Finished (took 5s.577ms)
+

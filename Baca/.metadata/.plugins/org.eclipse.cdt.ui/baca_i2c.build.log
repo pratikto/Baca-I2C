@@ -1,8 +1,28 @@
-22:08:13 **** Auto Build of configuration Debug for project baca_i2c ****
+23:07:06 **** Auto Build of configuration Debug for project baca_i2c ****
 make all 
 'Building file: ../src/i2c.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
+../src/i2c.cpp:68:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:169:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:181:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
+../src/i2c.cpp:300:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
+../src/i2c.cpp:311:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 'Finished building: ../src/i2c.cpp'
 ' '
 'Building target: baca_i2c.elf'
@@ -13,9 +33,9 @@ mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlitt
 'Invoking: MicroBlaze Print Size'
 mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  22648	   1412	   3484	  27544	   6b98	baca_i2c.elf
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
 'Finished building: baca_i2c.elf.size'
 ' '
 
-22:08:17 Build Finished (took 3s.267ms)
+23:07:09 Build Finished (took 2s.671ms)
 
