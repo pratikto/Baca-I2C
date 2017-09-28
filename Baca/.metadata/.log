@@ -8188,3 +8188,492 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 
 !ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 02:17:34.521
 !MESSAGE XSCT command with result: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, ]. Thread: main
+!SESSION 2017-09-28 11:42:05.541 -----------------------------------------------
+eclipse.buildId=2017.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data B:/Sekerepsih/Baca-I2C/Baca
+
+!ENTRY org.eclipse.ui 2 0 2017-09-28 11:42:14.497
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-09-28 11:42:14.498
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2017-09-28 11:42:19.258
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-09-28 11:42:19.258
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:41.784
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:41.786
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:49.665
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:49.668
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:49.672
+!MESSAGE XSCT Command: [setws B:/Sekerepsih/Baca-I2C/Baca], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:49.682
+!MESSAGE XSCT command with result: [setws B:/Sekerepsih/Baca-I2C/Baca], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:49.752
+!MESSAGE XSCT Command: [::hsi::utils::openhw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 11:42:50.237
+!MESSAGE XSCT command with result: [::hsi::utils::openhw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:51.809
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:51.913
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:51.916
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:51.958
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:51.965
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.015
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"freertos901_xilinx_v1_0": {"name": "freertos901_xilinx",
+"version": "1.0",
+"desc": "FreeRTOS is a market leading open source RTOS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/ThirdParty/bsp/freertos901_xilinx_v1_0",
+},
+"standalone_v6_2": {"name": "standalone",
+"version": "6.2",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/lib/bsp/standalone_v6_2",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.066
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.088
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, axi_iic_0 axi_uartlite_0 microblaze_0_axi_intc microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.091
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.107
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, {"axi_iic_0": {"name": "iic",
+"ver": "3.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.6",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.6",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.111
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.278
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_iic_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"iic_v3_4": {"name": "iic",
+"version": "3.4",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/iic_v3_4",
+},
+},
+},
+"axi_uartlite_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+},
+},
+},
+"clk_wiz_0": {"version": "5.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"clk_wiz_v1_2": {"name": "clk_wiz",
+"version": "1.2",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/clk_wiz_v1_2",
+},
+},
+},
+"mdm_1": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+},
+},
+},
+"microblaze_0": {"version": "10.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_6": {"name": "cpu",
+"version": "2.6",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_6",
+},
+},
+},
+"microblaze_0_axi_intc": {"version": "4.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"intc_v3_6": {"name": "intc",
+"version": "3.6",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/intc_v3_6",
+},
+},
+},
+"microblaze_0_axi_periph": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_1": {"name": "bram",
+"version": "4.1",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_1",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_1": {"name": "bram",
+"version": "4.1",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_1",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.3",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_xlconcat": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_clk_wiz_0_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.1/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.398
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.405
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.407
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.415
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.426
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.434
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.551
+!MESSAGE XSCT Command: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 15:15:52.556
+!MESSAGE XSCT command with result: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.debug.ui 4 0 2017-09-28 15:26:41.024
+!MESSAGE Launch shortcut 'com.xilinx.sdk.launch.remote.shortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:736)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:773)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2017-09-28 15:26:41.026
+!MESSAGE No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.605
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.675
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.677
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.690
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.729
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.740
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, {"axi_iic_0": {"name": "iic",
+"ver": "3.4",
+},
+"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"microblaze_0_axi_intc": {"name": "intc",
+"ver": "3.6",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.6",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.779
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.786
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.788
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.796
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.804
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.812
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.910
+!MESSAGE XSCT Command: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:33:45.914
+!MESSAGE XSCT command with result: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.761
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.772
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.774
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.782
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.786
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.818
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_iic_0": {"hier_name": "axi_iic_0",
+"type": "axi_iic",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "5.4",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "10.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.3",
+"ip_type": "MEMORY",
+},
+"microblaze_0_xlconcat": {"hier_name": "microblaze_0_xlconcat",
+"type": "xlconcat",
+"version": "2.1",
+"ip_type": "PERIPHERAL",
+},
+"rst_clk_wiz_0_100M": {"hier_name": "rst_clk_wiz_0_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.822
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.864
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7a35t",
+"family": "artix7",
+"timestamp": "Tue Sep 26 13:09:53 2017",
+"vivado_version": "2017.1",
+"part": "xc7a35tcpg236-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.874
+!MESSAGE XSCT Command: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:44:55.878
+!MESSAGE XSCT command with result: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/baca_i2c_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.285
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.319
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.320
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.342
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json B:/Sekerepsih/Baca-I2C/Baca/design_1_wrapper_hw_platform_0/system.hdf B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.2",
+}]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.344
+!MESSAGE XSCT Command: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2017-09-28 17:50:01.348
+!MESSAGE XSCT command with result: [::hsi::utils::closesw B:/Sekerepsih/Baca-I2C/Baca/coba_bsp/system.mss], Result: [null, ]. Thread: ModalContext

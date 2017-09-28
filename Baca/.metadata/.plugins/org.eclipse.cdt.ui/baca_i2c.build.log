@@ -1,49 +1,57 @@
-02:34:41 **** Auto Build of configuration Debug for project baca_i2c ****
+18:21:11 **** Auto Build of configuration Debug for project baca_i2c ****
 make all 
 'Building file: ../src/i2c.cpp'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c.o" -I../../baca_i2c_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c.d" -MT"src/i2c.o" -o "src/i2c.o" "../src/i2c.cpp"
-../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
-../src/i2c.cpp:54:22: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
-  else if (address = 0) {
-                      ^
-../src/i2c.cpp:91:39: error: expected primary-expression before ')' token
-       StatusHandler(XIic_StatusHandler));
-                                       ^
-../src/i2c.cpp:93:22: error: invalid use of member function 'void I2Cdev::SendHandler(XIic*)' (did you forget the '()' ?)
-       (XIic_Handler) SendHandler);
-                      ^~~~~~~~~~~
-../src/i2c.cpp:95:22: error: invalid use of member function 'void I2Cdev::ReceiveHandler(XIic*)' (did you forget the '()' ?)
-       (XIic_Handler) ReceiveHandler);
-                      ^~~~~~~~~~~~~~
-../src/i2c.cpp:22:5: warning: unused variable 'Index' [-Wunused-variable]
-  u8 Index;
-     ^~~~~
 ../src/i2c.cpp: In static member function 'static int I2Cdev::readBits(u8, u8, u8, u8, u8*)':
-../src/i2c.cpp:160:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/i2c.cpp:97:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../src/i2c.cpp: In static member function 'static int I2Cdev::readBytes(u8, u8, u8, u8*)':
-../src/i2c.cpp:261:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/i2c.cpp:157:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../src/i2c.cpp: In static member function 'static int I2Cdev::readWords(u8, u8, u8, uint16_t*)':
-../src/i2c.cpp:273:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/i2c.cpp:169:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../src/i2c.cpp: In static member function 'static bool I2Cdev::writeBytes(u8, u8, u8, u8*)':
-../src/i2c.cpp:392:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/i2c.cpp:288:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../src/i2c.cpp: In static member function 'static bool I2Cdev::writeWords(u8, u8, u8, uint16_t*)':
-../src/i2c.cpp:403:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../src/i2c.cpp:299:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-../src/i2c.cpp: In member function 'int I2Cdev::init(int, int)':
-../src/i2c.cpp:106:1: warning: control reaches end of non-void function [-Wreturn-type]
+../src/i2c.cpp: In static member function 'static int I2Cdev::WriteData(u16)':
+../src/i2c.cpp:328:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
+  int BusBusy;
+      ^~~~~~~
+../src/i2c.cpp: In static member function 'static int I2Cdev::ReadData(u8*, u16)':
+../src/i2c.cpp:412:6: warning: variable 'BusBusy' set but not used [-Wunused-but-set-variable]
+  int BusBusy;
+      ^~~~~~~
+../src/i2c.cpp: In member function 'int I2Cdev::init()':
+../src/i2c.cpp:42:1: warning: control reaches end of non-void function [-Wreturn-type]
  }
  ^
-make: *** [src/i2c.o] Error 1
+../src/i2c.cpp: At global scope:
+../src/i2c.cpp:609:13: warning: 'void StatusHandler(XIic*, int)' defined but not used [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event)
+             ^~~~~~~~~~~~~
+'Finished building: ../src/i2c.cpp'
+' '
+'Building target: baca_i2c.elf'
+'Invoking: MicroBlaze g++ linker'
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../baca_i2c_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "baca_i2c.elf"  ./src/i2c.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: baca_i2c.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size baca_i2c.elf  |tee "baca_i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11428	   1356	   3176	  15960	   3e58	baca_i2c.elf
+'Finished building: baca_i2c.elf.size'
+' '
 
-02:34:42 Build Finished (took 1s.130ms)
+18:21:17 Build Finished (took 6s.172ms)
 

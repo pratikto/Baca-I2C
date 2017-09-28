@@ -13,8 +13,7 @@ src/i2c.o src/i2c.o: ../src/i2c.cpp ../src/i2c.h \
  ../../baca_i2c_bsp/microblaze_0/include/xintc.h \
  ../../baca_i2c_bsp/microblaze_0/include/xintc_l.h \
  ../../baca_i2c_bsp/microblaze_0/include/xil_exception.h \
- ../../baca_i2c_bsp/microblaze_0/include/xil_printf.h \
- ../../baca_i2c_bsp/microblaze_0/include/xil_io.h
+ ../../baca_i2c_bsp/microblaze_0/include/xil_printf.h
 
 ../src/i2c.h:
 
@@ -47,5 +46,3 @@ src/i2c.o src/i2c.o: ../src/i2c.cpp ../src/i2c.h \
 ../../baca_i2c_bsp/microblaze_0/include/xil_exception.h:
 
 ../../baca_i2c_bsp/microblaze_0/include/xil_printf.h:
-
-../../baca_i2c_bsp/microblaze_0/include/xil_io.h:

@@ -8,12 +8,13 @@
 #ifndef SRC_I2C_H_
 #define SRC_I2C_H_
 
+/***************************** Include Files *********************************/
+
 #include "xparameters.h"
 #include "xiic.h"
 #include "xintc.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
-#include "xil_io.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -26,29 +27,27 @@
 #define INTC_DEVICE_ID		XPAR_INTC_0_DEVICE_ID
 #define IIC_INTR_ID		XPAR_INTC_0_IIC_0_VEC_ID
 
-/*
- * The following constant defines the address of the IIC device on the IIC bus.
- * Since the address is only 7 bits, this constant is the address divided by 2.
- */
-#define SLAVE_ADDRESS		0x70	/* 0xE0 as an 8 bit number. */
-
-#define RECEIVE_COUNT		25
-#define SEND_COUNT		25
 
 // 1000ms default read timeout (modify with "I2Cdev::readTimeout = [ms];")
 #define I2CDEV_DEFAULT_READ_TIMEOUT     1000
 
-/************************** Variable Definitions *****************************/
+#define SEND_COUNT 32
+#define RECEIVE_COUNT 32
 
-XIic IicInstance;		/* The instance of the IIC device. */
-XIntc InterruptController;	/* The instance of the Interrupt Controller */
+#define min(a,b) ((a)<(b)?(a):(b))
 
+XIic IicInstance;
+XIntc InterruptController;
+volatile u8 TransmitComplete;
+volatile u8 ReceiveComplete;
+u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
+u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
 
 class I2Cdev {
 public:
 	I2Cdev();
 
-	int init (int master, int addr);
+	int init ();
 
 	static int readBit(u8 devAddr, u8 regAddr, u8 bitNum, u8 *data);
 	static int readBitW(u8 devAddr, u8 regAddr, u8 bitNum, uint16_t *data);
@@ -68,31 +67,29 @@ public:
 	static bool writeBytes(u8 devAddr, u8 regAddr, u8 length, u8 *data);
 	static bool writeWords(u8 devAddr, u8 regAddr, u8 length, uint16_t *data);
 
-
 	static uint16_t readTimeout;
+
+	static int WriteData(u16 ByteCount);
+	static int ReadData(u8 *BufferPtr, u16 ByteCount);
+
 	virtual ~I2Cdev();
 
 private:
-	volatile int SetMaster;
-	volatile u8 address; //coba di cek di API nya pake u8 atau int parameternya
-	volatile u8 TransmitComplete;
-	volatile u8 ReceiveComplete;
-	volatile u8 SlaveRead;
-	volatile u8 SlaveWrite;
-	u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
-	u8 ReadBuffer[RECEIVE_COUNT]; /* Read buffer for reading a page. */
 
 
-	//axi iic act as slave
-	int SlaveWriteData(u16 ByteCount);
-	int SlaveReadData(u8 *BufferPtr, u16 ByteCount);
-	int SetupInterruptSystem(XIic * IicInstPtr);
-	void StatusHandler(XIic *InstancePtr, int Event);
+//	XIic IicInstance;
+//	XIntc InterruptController;
+
+//	u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
+//	u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
+
+//	volatile u8 TransmitComplete;
+//	volatile u8 ReceiveComplete;
+
+	int SetupInterruptSystem(XIic *IicInstPtr);
 	void SendHandler(XIic *InstancePtr);
 	void ReceiveHandler(XIic *InstancePtr);
-
-	XIic IicInstance;		/* The instance of the IIC device. */
-	XIntc InterruptController; /* The instance of the Interrupt Controller */
+	void StatusHandler(XIic *InstancePtr, int Event);
 };
 
 #endif /* SRC_I2C_H_ */
