@@ -31,14 +31,25 @@ int I2Cdev::init()
 		return XST_FAILURE;
 		}
 
-		/*
-		 * Setup the Interrupt System.
-		 */
-		Status = SetupInterruptSystem(&IicInstance);
-		if (Status != XST_SUCCESS) {
-			return XST_FAILURE;
-		}
+	/*
+	 * Setup the Interrupt System.
+	 */
+	Status = SetupInterruptSystem(&IicInstance);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
+	/*
+	 * Set the Transmit, Receive and Status handlers.
+	 * there is error in example :
+	 * https://github.com/Xilinx/embeddedsw/blob/master/XilinxProcessorIPLib/drivers/iic/examples/xiic_repeated_start_example.c
+	 * to correct this just add "IicInstance." before sendHandler, recvHandler, StatusHandler
+	 */
+	XIic_SetSendHandler(&IicInstance, &IicInstance, (XIic_Handler) IicInstance.SendHandler);
+	XIic_SetRecvHandler(&IicInstance, &IicInstance, (XIic_Handler) IicInstance.RecvHandler);
+	XIic_SetStatusHandler(&IicInstance, &IicInstance, (XIic_StatusHandler) IicInstance.StatusHandler);
+
+	return XST_SUCCESS;
 }
 
 /** Read a single bit from an 8-bit device register.
@@ -86,14 +97,14 @@ int I2Cdev::readBits(u8 devAddr, u8 regAddr, u8 bitStart, u8 length, u8 *data) {
 	//    xxx   args: bitStart=4, length=3
 	//    010   masked
 	//   -> 010 shifted
-//	u8 count, b;
-//	if ((count = readByte(devAddr, regAddr, &b, timeout)) != 0) {
-//		u8 mask = ((1 << length) - 1) << (bitStart - length + 1);
-//		b &= mask;
-//		b >>= (bitStart - length + 1);
-//		*data = b;
-//	}
-//	return count;
+	u8 count, b;
+	if ((count = readByte(devAddr, regAddr, &b)) != 0) {
+		u8 mask = ((1 << length) - 1) << (bitStart - length + 1);
+		b &= mask;
+		b >>= (bitStart - length + 1);
+		*data = b;
+	}
+	return count;
 }
 
 /** Read multiple bits from a 16-bit device register.
@@ -153,7 +164,22 @@ int I2Cdev::readWord(u8 devAddr, u8 regAddr, uint16_t *data) {
 * @return Number of bytes read (-1 indicates failure)
 */
 int I2Cdev::readBytes(u8 devAddr, u8 regAddr, u8 length, u8 *data) {
+	int Status;
+	u8 reg[1]= {regAddr};
+	/*
+	 * Set the Address of the Slave.
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,devAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
+	//write register address to slave
+	WriteData(reg, 1);
+	//read data from slave
+	ReadData(data, length);
+
+	return(length);
 }
 
 /** Read multiple words from a 16-bit device register.
@@ -165,7 +191,29 @@ int I2Cdev::readBytes(u8 devAddr, u8 regAddr, u8 length, u8 *data) {
 * @return Number of words read (0 indicates failure)
 */
 int I2Cdev::readWords(u8 devAddr, u8 regAddr, u8 length, uint16_t *data) {
+	int Status;
+	u8 reg[1] = {regAddr};
+	u8 temp[2*length];
 
+	/*
+	 * Set the Address of the Slave.
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,devAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//write register address to slave
+	WriteData(reg, 1);
+//	read data from slave
+	ReadData(temp, 2*length);
+
+	for(int i=0; i<2*length; i=i+2){
+		data[i/2] = temp[i] << 8; 	//msb
+		data[i/2] |= temp[i+1];		//lsb
+	}
+
+	return(length);
 }
 
 /** write a single bit in an 8-bit device register.
@@ -284,7 +332,22 @@ bool I2Cdev::writeWord(u8 devAddr, u8 regAddr, uint16_t data) {
 * @return Status of operation (true = success)
 */
 bool I2Cdev::writeBytes(u8 devAddr, u8 regAddr, u8 length, u8* data) {
+	int Status;
+	u8 reg[1]= {regAddr};
+	/*
+	 * Set the Address of the Slave.
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,devAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
+	//write register address to slave
+	WriteData(reg, 1);
+	//read data from slave
+	WriteData(data, length);
+
+	return(false); //false -> succes
 }
 
 /** Write multiple words to a 16-bit device register.
@@ -295,15 +358,40 @@ bool I2Cdev::writeBytes(u8 devAddr, u8 regAddr, u8 length, u8* data) {
 * @return Status of operation (true = success)
 */
 bool I2Cdev::writeWords(u8 devAddr, u8 regAddr, u8 length, uint16_t* data) {
+	int Status;
+	u8 reg[1]= {regAddr};
+	u8 temp[2*length];
 
+	for(int i=0; i<2*length; i=i+2){
+		temp[i] = data[i] << 8;
+		temp[i] = temp[i];
+	}
+
+	/*
+	 * Set the Address of the Slave.
+	 */
+	Status = XIic_SetAddress(&IicInstance, XII_ADDR_TO_SEND_TYPE,devAddr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	//write register address to slave
+	WriteData(reg, 1);
+//	read data from slave
+	ReadData(temp, 2*length);
+
+	for(int i=0; i<2*length; i=i+2){
+		data[i/2] = (temp[i] << 8) + temp[i+1];
+	}
+
+	return(length);
 }
 
-/** Default timeout value for read operations.
+/**
+* Default timeout value for read operations.
 * Set this to 0 to disable timeout detection.
 */
 uint16_t I2Cdev::readTimeout = I2CDEV_DEFAULT_READ_TIMEOUT;
-//volatile u8 I2Cdev::TransmitComplete;
-//volatile u8 I2Cdev::ReceiveComplete;
 
 I2Cdev::~I2Cdev() {
 	// TODO Auto-generated destructor stub
@@ -322,7 +410,7 @@ I2Cdev::~I2Cdev() {
 * @note		None.
 *
 ******************************************************************************/
-int I2Cdev::WriteData(u16 ByteCount)
+int I2Cdev::WriteData(u8* data, u16 ByteCount)
 {
 	int Status;
 	int BusBusy;
@@ -348,7 +436,7 @@ int I2Cdev::WriteData(u16 ByteCount)
 	/*
 	 * Send the data.
 	 */
-	Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+	Status = XIic_MasterSend(&IicInstance, data, ByteCount);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -371,7 +459,7 @@ int I2Cdev::WriteData(u16 ByteCount)
 	/*
 	 * Send the Data.
 	 */
-	Status = XIic_MasterSend(&IicInstance, WriteBuffer, ByteCount);
+	Status = XIic_MasterSend(&IicInstance, data, ByteCount);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -406,7 +494,7 @@ int I2Cdev::WriteData(u16 ByteCount)
 * @note		None.
 *
 ******************************************************************************/
-int I2Cdev::ReadData(u8 *BufferPtr, u16 ByteCount)
+int I2Cdev::ReadData(u8 *data, u16 ByteCount)
 {
 	int Status;
 	int BusBusy;
@@ -432,7 +520,7 @@ int I2Cdev::ReadData(u8 *BufferPtr, u16 ByteCount)
 	/*
 	 * Receive the data.
 	 */
-	Status = XIic_MasterRecv(&IicInstance, BufferPtr, ByteCount);
+	Status = XIic_MasterRecv(&IicInstance, data, ByteCount);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -455,7 +543,7 @@ int I2Cdev::ReadData(u8 *BufferPtr, u16 ByteCount)
 	/*
 	 * Receive the Data.
 	 */
-	Status = XIic_MasterRecv(&IicInstance, BufferPtr, ByteCount);
+	Status = XIic_MasterRecv(&IicInstance, data, ByteCount);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -606,7 +694,7 @@ void I2Cdev::ReceiveHandler(XIic *InstancePtr)
 * @note		None.
 *
 ******************************************************************************/
-static void StatusHandler(XIic *InstancePtr, int Event)
+void I2Cdev::StatusHandler(XIic *InstancePtr, int Event)
 {
 
 }

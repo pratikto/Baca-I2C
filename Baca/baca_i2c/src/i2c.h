@@ -40,10 +40,26 @@ XIic IicInstance;
 XIntc InterruptController;
 volatile u8 TransmitComplete;
 volatile u8 ReceiveComplete;
-u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
-u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
+//u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
+//u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
 
 class I2Cdev {
+private:
+
+
+//	XIic IicInstance;
+//	XIntc InterruptController;
+
+//	u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
+//	u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
+
+//	u8 TransmitComplete;
+//	u8 ReceiveComplete;
+
+	int SetupInterruptSystem(XIic *IicInstPtr);
+	void SendHandler(XIic *InstancePtr);
+	void ReceiveHandler(XIic *InstancePtr);
+	void StatusHandler(XIic *InstancePtr, int Event);
 public:
 	I2Cdev();
 
@@ -69,27 +85,10 @@ public:
 
 	static uint16_t readTimeout;
 
-	static int WriteData(u16 ByteCount);
-	static int ReadData(u8 *BufferPtr, u16 ByteCount);
+	static int WriteData(u8 *data, u16 ByteCount);
+	static int ReadData(u8 *data, u16 ByteCount);
 
 	virtual ~I2Cdev();
-
-private:
-
-
-//	XIic IicInstance;
-//	XIntc InterruptController;
-
-//	u8 WriteBuffer[SEND_COUNT];	/* Write buffer for writing a page. */
-//	u8 ReadBuffer[RECEIVE_COUNT];	/* Read buffer for reading a page. */
-
-//	volatile u8 TransmitComplete;
-//	volatile u8 ReceiveComplete;
-
-	int SetupInterruptSystem(XIic *IicInstPtr);
-	void SendHandler(XIic *InstancePtr);
-	void ReceiveHandler(XIic *InstancePtr);
-	void StatusHandler(XIic *InstancePtr, int Event);
 };
 
 #endif /* SRC_I2C_H_ */
